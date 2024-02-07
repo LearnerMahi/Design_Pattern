@@ -1,0 +1,34 @@
+#SingleTon er condition
+(resource: https://www.youtube.com/watch?v=fs6ZUcF-nuc&t=9s&ab_channel=LearnCodeWithDurgesh)
+LAZY WAY->
+1.private constructor.
+2.class type er variable private static declare kora lagbe(jeita by default null thakbe)
+3.only akbar ontoto object create kora lagbe j methode(ei method(public) return type abar class type hobe) seita 
+static hoite hobe keno?abong akbar instance create korar por jeno new classname(); abar call na hoi seitao ensure
+kora lagbe.akbar create hok ba na hok oi object return kore dite hobe
+4.create field to store object s private.
+5.hashcode diye check korte hobe j object same kina.
+6.main function e oi method diyei object call(1st bar er jonno create abong call onno sobbar er jonno only call)
+kora lagbe.emne Class_name variable=Class_name.method();emne
+
+in english.
+1.You need a private constructor.
+2.Declare a private static variable of the class type (which will be null by default).
+3.Only once, an instance object needs to be created via a method (this method should be public and return type should
+be of the class type). This method needs to be static because it ensures that the object creation occurs only once,
+and subsequent calls to create the object are ignored.
+4.Create a field to store the object privately.
+5.Use the hashCode method to check if two objects are the same.
+6.In the main function, call the method to create the object (create and call for the first time, and only call for
+subsequent times).
+
+EAGER WAY->
+1.1st e class type er private static variable assign kore nite hobe(new class_name();)mane object create kore.
+2.public static class_name method(){ return variable;} korte hobe
+
+In ENGLISH->
+1.Initially, you need to assign a private static variable of the class type by creating an object (new class_name();)
+2.You need to create a public static method that returns the class_name variable.
+In summary, in the eager way, the class creates the object as soon as it is loaded, and a static method returns that pre-created object.
+
+LAZY WAY(eitate thread er somossa synchonized key word er akta bepar separ ase)>>>EAGER WAY why or why not?
